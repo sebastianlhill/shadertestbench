@@ -177,7 +177,7 @@ void main() {
       for (int i = 0; i < MAX_STEPS; ++i){
         t = tNear + (i + 0.5) * stepSize; 
         x = ro + t * rd;
-        sigma_t = cloudDensity(x);
+        sigma_t = density(x);
         // transmittance over this segment 
         stepTrans = exp(-sigma_t * stepSize);
         // accumulate in scattered light 
